@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instagram</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .post{
+      cursor: pointer;
+      position:relative;
+      display: block;
+    }
+
+    .post-images{
+      margin:0;
+    }
+
+    .post-image img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .post-overlay {
+      background: rgba(0,0,0, .4);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+
+    }
+
+    .post:hover .post-overlay {
+      display: flex;
+    }
+
+    .post-likes,
+    .post-comments {
+      width: 80px;
+      margin: 5px;
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+    }
+
+ .post-list{
+   display: grid;
+   grid-template-columns:repeat(3, minmax(100px, 293px));
+   justify-content: center;
+   grid-gap: 28px;
+ }
+
+
+.profile-container{
+  width: 920px;
+margin: 0 auto;
+display: grid;
+grid-template: 220px / 300px 1fr;
+/* border: 1px solid red; */
+padding-top: 60px;
+margin-bottom: 44px;
+}
+}
+
+.image-profile{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.detailDescription{
+
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detailDescription h2
+{
+    margin-top: -20px;
+    margin: 0;
+    font-size: 1em;
+}
+
+.detailDescription p
+{
+    margin: 0;
+    letter-spacing: .4px;
+    font-size: 1em;
+    line-height: 22px;
+}
+
+.header{
+  border: 1px solid rgb(219,219,219);
+  height: 75px;
+}
+
+.header .margen{
+  display: grid;
+  grid-template: 75px / repeat(3, 1fr);
+  margin: 0 auto;
+}
+
+.logoContainer{
+display:flex;
+align-items: center;
+height: 75px;
+}
+
+.searchContainer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscador{
+  width: 200px;
+    height: -100px;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.096);
+    border: 1px solid rgb(219,219,219);
+}
+
+.menuContainer ul{
+  display: flex;
+  align-items: center;
+  height: 75px;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.menuContainer ul li{
+  list-style: none;
+}
+
+.menuContainer ul li img{
+margin: 0 12px 0;
+}
+
+@media screen and (max-width: 600px){
+  .post-list{
+    grid-gap: 3px;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+              <div class="margen">
+                  <div class="logoContainer">
+                      <a href="#" class="linkLogo">
+
+                          <img src="images/Logo.png" alt="Logo instagram" width="150">
+                      </a>
+                  </div>
+                  <div class="searchContainer">
+                      <input type="text" placeholder="Buscar" class="buscador">
+                  </div>
+                  <nav class="menuContainer">
+                      <ul>
+                   <li> <img src="images/compartir.png" width="25"> </li>
+                   <li> <img src="images/perfil.png" width="25"> </li>
+                   <li> <img src="images/heart.png" width="25"> </li>
+                      </ul>
+                  </nav>
+              </div>
+          </header>
+
+<section class="profile-container">
+<div class="image-profile">
+    <img src="images/perfil.jpg"  width="150">
+    </div>
+
+    <div class="detailDescription">
+      <div class="name">
+        <h2>Patricia Contreras</h2>
+      </div>
+                      <div class="data">
+
+                      </div>
+                          <p>
+                              🏅Ingeniero de Sistemas & Amante del Ar️te‍<br />
+                              🌟Estudiante de Platzi🌟<br />
+                              ☕Futuro FrontEnd Dev<br />
+
+                          </p>
+                      </div>
+</section>
+
+
+
+
+  <section class="post-list">
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu2.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="images/compu3.jpg" alt="">
+      </figure>
+      <span class="post-overlay">
+        <p>
+        <span class="post-likes">150</span>
+        <span class="post-comments">10</span>
+        </p>
+      </span>
+    </a>
+  </section>
+</body>
+</html>
